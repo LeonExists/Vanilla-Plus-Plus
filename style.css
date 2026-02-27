@@ -1,3 +1,20 @@
+:root {
+  /* --- Dark Mode (NOW DEFAULT) --- */
+  --bg-page: #020617;       /* Slate 950 */
+  --text-main: #f1f5f9;     /* Slate 100 */
+  --text-muted: #94a3b8;    /* Slate 400 */
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* --- Brand & Accents --- */
+  --brand-primary: #10b981;  /* Emerald 500 */
+  --brand-hover: #059669;    /* Emerald 600 */
+  --brand-gradient: linear-gradient(to right, #34d399, #22d3ee);
+
+  /* --- Glass Effect (Dark Default) --- */
+  --glass-bg: rgba(2, 6, 23, 0.8);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +23,6 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: var(--bg-page);
+  color: var(--text-main);
 }
