@@ -28,11 +28,26 @@ export default {
 
 <style scoped>
 .site-header {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  
   width: 100%;
+  
+  background: transparent;
+  
+  border-bottom: 1px solid transparent;
+  
+  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+}
+
+.site-header.scrolled {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  
   border-bottom: var(--glass-border);
+
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
