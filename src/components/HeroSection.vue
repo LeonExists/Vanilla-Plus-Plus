@@ -14,18 +14,21 @@ export default {
 </script>
 
 <style scoped>
+/* Hero */
 .hero {
-  position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
-  background-image: url('../assets/backgrounds/caves_and_cliffs.png');
+  position: relative;
+
+  min-height: 100vh;
+
+  background-image: url('/images/caves_and_cliffs.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: local;
 }
 
 .hero::before {
@@ -42,11 +45,12 @@ export default {
   background: linear-gradient(to bottom, rgba(2, 6, 23, 0.3), rgba(2, 6, 23, 0.7));
 }
 
+/* Content */
 .hero-content {
-  max-width: 800px;
-  
   position: relative;
   z-index: 2;
+
+  max-width: 800px;
 
   padding: 2rem;
   
@@ -55,13 +59,17 @@ export default {
 
 .hero-content h1 {
   margin-bottom: 1.5rem;
-  
+
+  font-family: var(--font-minecraft);
+  font-weight: 700;
+
   background: var(--brand-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
+
   font-size: 4rem;
+  letter-spacing: 0.05em;
 }
 
 .hero-content p {
