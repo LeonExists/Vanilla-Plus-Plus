@@ -1,4 +1,17 @@
+/* Minecraft Bold Font */
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/fonts/Minecraft-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
+  /* --- Fonts --- */
+  --font-minecraft: 'Minecraft', monospace, sans-serif;
+  --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
   /* --- Dark Mode (NOW DEFAULT) --- */
   --bg-page: #020617;       /* Slate 950 */
   --text-main: #f1f5f9;     /* Slate 100 */
