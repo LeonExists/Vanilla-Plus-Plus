@@ -1,5 +1,5 @@
 <template>
-  <header :class="['site-header', { 'scrolled': scrolled }]">
+  <header class="site-header">
     <nav>
       <div class="logo">
         <div class="logo-icon">V</div>
@@ -22,44 +22,17 @@
 
 <script>
 export default {
-  name: 'Header',
-  data() {
-    return {
-      scrolled: false
-    }
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
-  methods: {
-    handleScroll() {
-      this.scrolled = window.scrollY > 50
-    }
-  }
+  name: 'Header'
 }
 </script>
 
 <style scoped>
 .site-header {
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 50;
-  transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
-  background: transparent;
-  border-bottom: 1px solid transparent;
-}
-
-.site-header.scrolled {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
   border-bottom: var(--glass-border);
-
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
