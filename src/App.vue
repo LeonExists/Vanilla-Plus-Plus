@@ -3,27 +3,20 @@
 
     <Header />
 
-    <main>
-      <h1>Welcome to Vanilla++</h1>
-      <p>Enhanced Vanilla Minecraft Experience</p>
-      <FeatureCard
-        title="Enhanced Gameplay"
-        description="Experience Minecraft with quality of life improvements while keeping the vanilla feel."
-      />
-    </main>
+    <Hero />
 
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import FeatureCard from './components/FeatureCard.vue'
+import Hero from './components/HeroSection.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    FeatureCard
+    Hero
   }
 }
 </script>
@@ -46,30 +39,5 @@ body {
 
 #app {
   min-height: 100vh;
-}
-
-main {
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  padding: 2rem;
-}
-
-h1 {
-  margin-bottom: 1rem;
-
-  background: var(--brand-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 3rem;
-}
-
-p {
-  margin-bottom: 2rem;
-
-  color: var(--text-muted);
-  font-size: 1.25rem;
 }
 </style>
